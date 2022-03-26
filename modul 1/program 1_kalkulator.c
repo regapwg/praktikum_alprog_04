@@ -89,9 +89,9 @@ void pertambahan(){
 		printf("=== PERTAMBAHAN ===");
 		printf("\n____________________________");
 		printf("\n\nMasukkan Angka Pertama \t: ");		
-		a=validasi();
+		a=checkinput();
 		printf("Masukkan Angka Kedua \t: ");
-		b=validasi();
+		b=checkinput();
 		system("cls");
 		hasil = a + b;
 		printf("\n\t%d + %d = %d", a, b, hasil);
@@ -102,9 +102,9 @@ void pengurangan(){
 	printf("=== PENGURANGAN ===");
 	printf("\n____________________________");
 	printf("\n\nMasukkan Angka Pertama \t: ");
-	a=validasi();
+	a=checkinput();
 	printf("Masukkan Angka Kedua \t: ");
-	b=validasi();
+	b=checkinput();
 	system("cls");
 	hasil = a - b;
 	printf("\n\t%d - %d = %d", a, b, hasil);
@@ -115,9 +115,9 @@ void perkalian(){
 	printf("=== PERKALIAN ===				");
 	printf("\n\n____________________________");
 	printf("\n\nMasukkan Angka Pertama \t: 	");
-	a=validasi();
+	a=checkinput();
 	printf("Masukkan Angka Kedua \t: 		");
-	b=validasi();
+	b=checkinput();
 	system("cls");
 	hasil = a * b;
 	printf("\n\t%d x %d = %d", a, b, hasil);
