@@ -10,6 +10,7 @@ void pembagian();
 void modulus();
 int validasi();
 int checkinput();
+int validasinol();
 void akhir();
 
 int main(){
@@ -114,9 +115,9 @@ void perkalian(){
 	int a, b, hasil;
 	printf("=== PERKALIAN ===				");
 	printf("\n\n____________________________");
-	printf("\n\nMasukkan Angka Pertama \t: 	");
+	printf("\n\nMasukkan Angka Pertama \t: ");
 	a=checkinput();
-	printf("Masukkan Angka Kedua \t: 		");
+	printf("Masukkan Angka Kedua \t: ");
 	b=checkinput();
 	system("cls");
 	hasil = a * b;
@@ -128,9 +129,9 @@ void pembagian(){
 	printf("=== PEMBAGIAN ===");
 	printf("\n\n____________________________");
 	printf("\n\nMasukkan Angka Pertama \t: ");
-	a=checkinput();
+	a=validasinol();
 	printf("Masukkan Angka Kedua \t: ");
-	b=checkinput();
+	b=validasinol();
 	system("cls");	
 	hasil = a / b;
 	printf("\n\t%d : %d = %d", a, b, hasil);
@@ -141,9 +142,9 @@ void modulus(){
 	printf("=== MODULUS ===");
 	printf("\n\n____________________________");
 	printf("\n\nMasukkan Angka Pertama \t: ");
-	a=checkinput();
+	a=validasinol();
 	printf("Masukkan Angka Kedua \t: ");
-	b=checkinput();
+	b=validasinol();
 	system("cls");
 	hasil=a%b;
 	printf("\n\t%d mod %d = %d", a, b, hasil);
@@ -176,9 +177,23 @@ int checkinput() {
 		printf("\nNilai yang anda masukan tidak valid!\nMohon masukan angka : ");
         return checkinput();
         printf("\n===============================================\n");
+	} else {
+        return nilai;
+    }
+}
+
+int validasinol() {
+    int nilai;
+	char check;
+	
+    if (scanf("%i%c", &nilai, &check) != 2 || check != '\n') {
+    	fflush(stdin);
+		printf("\nNilai yang anda masukan tidak valid!\nMohon masukan angka : ");
+        return validasinol();
+        printf("\n===============================================\n");
 	} else if (nilai <= 0) {
 		printf("\nNilai yang anda masukan tidak valid!\nMohon masukan bilangan selain 0 dan negatif : ");
-		return checkinput();
+		return validasinol();
         printf("\n===============================================\n");	
 	} else {
         return nilai;
