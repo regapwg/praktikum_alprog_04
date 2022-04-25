@@ -20,10 +20,10 @@ int main(){
 
         printf("\t\t+-------------------------------------------+\n");
         printf("\t\t|--         PROGRAM NILAI AKHIR           --|\n");
-		printf("\t\t+-------------------------------------------+\n");
-		printf("\t\t|==============[    MENU     ]==============|\n");
-		printf("\t\t|            1. Cek Nilai Akhir             |\n");
-		printf("\t\t|            2. Tutup Program               |\n");
+	printf("\t\t+-------------------------------------------+\n");
+	printf("\t\t|==============[    MENU     ]==============|\n");
+	printf("\t\t|            1. Cek Nilai Akhir             |\n");
+	printf("\t\t|            2. Tutup Program               |\n");
         printf("\t\t+-------------------------------------------+\n");
 
 
@@ -67,8 +67,8 @@ void nilaiAkhir(){
         printf("\t\t                   -hEn-                     \n");
         printf("\t\t+-------------------------------------------+\n");
         printf("\t\t|--              KELOMPOK 04              --|\n");
-		printf("\t\t+-------------------------------------------+\n");
-		printf("\t\t|            PROGRAM NILAI AKHIR            |\n");
+	printf("\t\t+-------------------------------------------+\n");
+	printf("\t\t|            PROGRAM NILAI AKHIR            |\n");
         printf("\t\t+-------------------------------------------+\n");
 
 
