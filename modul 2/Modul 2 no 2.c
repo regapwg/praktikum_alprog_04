@@ -27,11 +27,10 @@ int main(){
         printf("\t\t+-------------------------------------------+\n");
 
 
-
 	do{
 		printf("\t\tMasukkan pilihan: ");
 		if(((scanf(" %c%c", &pilihan, &enterCheck)) != 2 || enterCheck != '\n') && clean()){
-			printf("Inputan salah! Mohon hanya memasukkan angka dari 1 hingga 2\n\n");
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka dari 1 hingga 2\n\n");
 		}
 		else{
 			if(pilihan == '1'){
@@ -43,7 +42,7 @@ int main(){
 				break;
 			}
 			else{
-				printf("Inputan salah! Mohon hanya memasukkan angka dari 1 hingga 2\n\n");
+				printf("\t\tInputan salah! Mohon hanya memasukkan angka dari 1 hingga 2\n\n");
 			}
 		}
 	}while(1);
@@ -81,14 +80,14 @@ void nilaiAkhir(){
 		if(validasiAbsensi(userInput) == 1){ // apabila nilai dari userInput valid maka
 			absensi = atoi(userInput); // konversikan nilai dari userInput menjadi integer dan inisialisasi ke dalam variabel absensi
 			if(absensi < 0 || absensi > 15){ // apabila absensi kurang dari 0 danlebih dari 15 maka
-				printf("\tInputan salah! absen minimal 0 max 15\n\n"); // tampilkan error
+				printf("\t\tInputan salah! absen minimal 0 max 15\n\n"); // tampilkan error
 			}
 			else{ // selain dari itu maka
 				break; // keluar dari perulangan
 			}
 		}
 		else{ // apabila tidak valid maka
-			printf("\tInputan salah! Mohon hanya memasukkan angka\n\n"); // tampilkan error
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka\n\n"); // tampilkan error
 		}
 	}while(1);
 
@@ -107,14 +106,14 @@ void nilaiAkhir(){
 		if(validasi(userInput) == 1){ // apabila nilai dari userInput valid maka
 			tugas1 = atof(userInput); // konversikan nilai dari userInput menjadi float dan inisialisasi ke dalam variabel tugas
 			if(tugas1 > 100){ // apabila nilai tugas lebih dari 100 maka
-				printf("Inputan salah! inputan tidak boleh lebih dari 100\n\n"); // tampilkan error
+				printf("\t\tInputan salah! inputan tidak boleh lebih dari 100\n\n"); // tampilkan error
 			}
 			else{ // selain dari itu maka
 				break; // keluar dari perulangan
 			}
 		}
 		else{ // apabila tidak valid maka
-			printf("Inputan salah! Mohon hanya memasukkan angka\n\n"); // tampilkan error
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka\n\n"); // tampilkan error
 		}
 	}while(1);
 
@@ -125,14 +124,14 @@ void nilaiAkhir(){
 		if(validasi(userInput) == 1){ // apabila nilai dari userInput valid maka
 			tugas2 = atof(userInput); // konversikan nilai dari userInput menjadi float dan inisialisasi ke dalam variabel tugas
 			if(tugas2 > 100){ // apabila nilai tugas lebih dari 100 maka
-				printf("Inputan salah! inputan tidak boleh lebih dari 100\n\n"); // tampilkan error
+				printf("\t\tInputan salah! inputan tidak boleh lebih dari 100\n\n"); // tampilkan error
 			}
 			else{ // selain dari itu maka
 				break; // keluar dari perulangan
 			}
 		}
 		else{ // apabila tidak valid maka
-			printf("Inputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
 		}
 	}while(1);
 
@@ -143,14 +142,14 @@ void nilaiAkhir(){
 		if(validasi(userInput) == 1){ // apabila nilai dari userInput valid maka
 			tugas3 = atof(userInput); // konversikan nilai dari userInput menjadi float dan inisialisasi ke dalam variabel tugas
 			if(tugas3 > 100){ // apabila nilai tugas lebih dari 100 maka
-				printf("Inputan salah! inputan tidak boleh lebih dari 100.\n\n"); // tampilkan error
+				printf("\t\tInputan salah! inputan tidak boleh lebih dari 100.\n\n"); // tampilkan error
 			}
 			else{ // selain dari itu maka
 				break; // keluar dari perulangan
 			}
 		}
 		else{ // apabila tidak valid maka
-			printf("Inputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
 		}
 	}while(1);
 
@@ -186,7 +185,7 @@ void nilaiAkhir(){
 			}
 		}
 		else{ // apabila tidak valid maka
-			printf("Inputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
+			printf("\t\tInputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
 		}
 	}while(1);
 
@@ -211,14 +210,17 @@ void nilaiAkhir(){
 		}
 		else{ // apabila tidak valid maka
 			printf("\t\tInputan salah! Mohon hanya memasukkan angka.\n\n"); // tampilkan error
+
 		}
 	}
-}while(0);
+}
+while(0);
 
         totalnilai_tugas = hitungTotalNilaiTugas(tugas1, tugas2, tugas3);
 		nilaiAngka = hitungNilaiAngka(kuis, uts, uas, totalnilai_tugas, absensi);
 		/* memanggil fungsi hitungNilaiAngka untuk menghitung nilai angka berdasarkan nilai tugas 1-3, kuis, UTS, dan UAS yang diinputkan
 		   nilai yang dikembalikan oleh fungsi akan diinisialisasi ke dalam variabel nilaiAngka */
+		   system("cls");
 	            printf("\n\n\t\t\xb2============================================\xb2\n");
 	            printf("\t\t\xba\t\t\xaf\xf9Nilai Akhir\xf9\xae\t\t     \xba\n");
 	            printf("\t\t\xb2============================================\xb2\n");
