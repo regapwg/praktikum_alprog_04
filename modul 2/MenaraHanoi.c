@@ -51,7 +51,10 @@ void rekursifHanoi(n, a, b, c) {
 	int m; //jumlah cakram
 	char x, y, z; //tiang
 	int langkah;
+	char hitung;
 	
+	do{
+		system("cls");
 	printf("==================================\n");
 	printf("          PROGRAM HANOI           \n");
 	printf("            REKURSIF              \n");
@@ -67,17 +70,23 @@ void rekursifHanoi(n, a, b, c) {
 	printf("Langkah-langkah pemindahan cakram : \n\n");
 	menghitungHanoi(m, 'A', 'B', 'C');
 	
+	printf("\nUlangi Menghitung (Y/T) ? ");
+	scanf("%s", &hitung);
+	} while (hitung == 'Y' || hitung == 'y');
+		system("cls");
 }
 
 void iteratifHanoi(int n, char tiangA, char tiangB, char tiangC) {
 	int m; //jumlah cakram
 	int i; //perulangan
 	int langkah;
+	char hitung;
 	char tiang[3];
 	tiang[0]=tiangA;
     tiang[1]=tiangB;
     tiang[2]=tiangC;
-	
+	do{
+		system("cls");
 	printf("==================================\n");
 	printf("          PROGRAM HANOI           \n");
 	printf("            ITERATIF              \n");
@@ -98,17 +107,19 @@ void iteratifHanoi(int n, char tiangA, char tiangB, char tiangC) {
     for(i = 1; i <=langkah; i++){
         printf("Pindahkan cakram paling atas dari tiang %c ke tiang %c\n", tiang[(i&i-1)%3], tiang[((i|i-1)+1)%3]);
     }
+    printf("\nUlangi Menghitung (Y/T) ? ");
+	scanf("%s", &hitung);
+	} while (hitung == 'Y' || hitung == 'y');
+		system("cls");
 }
 
 int main() {
 	int menu;
 	int m;
 	char ulang;
-	char hitung;
 	
-	do{
+	do {
 		system("cls");
-
 	printf("\t\t\t\t==================================\n");
 	printf("\t\t\t\t     PROGRAM MENARA HANOI         \n");
 	printf("\t\t\t\t             OLEH:                \n");
@@ -129,8 +140,6 @@ int main() {
 	printf("Masukan angka yang anda inginkan : ");
 	menu=validasiMenu();
 	system("cls");
-	do {
-		system("cls");
 	if (menu==1) {
 		rekursifHanoi(m, 'A', 'B', 'C');
 	} else if (menu==2) {
@@ -138,12 +147,9 @@ int main() {
 	} else {
 	}
 	printf("\n\n-------------------------------");
-	printf("\nUlangi Menghitung (Y/T) ? ");
-	scanf("%s", &hitung);
-	} while (hitung == 'Y' || hitung == 'y');
-		system("cls");
+
 		
-	printf("\n\nUlangi Lagi (Y/T) ? ");
+	printf("\n\nKembali Ke Menu Awal (Y/T) ? ");
 	scanf("%s", &ulang);
 	} while (ulang == 'Y' || ulang == 'y');
 		system("cls");
