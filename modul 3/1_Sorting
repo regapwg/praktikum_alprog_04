@@ -115,7 +115,7 @@ void bubbleSort(int arr[], int n){
 int sort(){
     clock_t start, end;
     double waktu1, waktu2, waktu3;
-    int i, n, pilihan;
+    int n, pilihan;
     system("cls");
     printf("====================================\n");
     printf("| Pilihan Jumlah Data              |\n");
@@ -362,7 +362,7 @@ double binarySearch(int arr[], int low, int high, int angkaDicari) {
 int search() {
     clock_t start, end;
     double waktu1, waktu2;
-    int i, n, angkaDicari, pilihan;
+    int n, angkaDicari, pilihan;
     system("cls");
     printf("====================================\n");
     printf("| Pilihan Jumlah Data Searching    |\n");
