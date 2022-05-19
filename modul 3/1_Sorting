@@ -439,8 +439,7 @@ int search() {
 }
 
 int main(){
-    char pilihan, karakter;
-    int cek;
+    char pilihan;
     system("cls");
 
   printf("==============================================\n");
